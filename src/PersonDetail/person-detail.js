@@ -1,0 +1,35 @@
+import React from 'react';
+import {useRouteMatch, useHistory} from 'react-router-dom';
+
+const PersonDetail = (props) => {
+    let history = useHistory();
+    let match = useRouteMatch();
+    let previous = parseInt(match.params.id) - 1;
+    let next = parseInt(match.params.id) + 1;
+    console.log(props.peopleArray);
+    if(match.params.id == 0){
+        previous = parseInt(props.peopleArray.length) - 1;
+    }
+    if(match.params.id == (props.peopleArray.length -1)){
+        next = 0;
+    }
+    let person = props.peopleArray[match.params.id].props.person;
+    console.log(person)
+    return (
+        <div className='person-detail'>
+            <h2>{person.name.title} {person.name.first} {person.name.last}</h2>
+            <p>Phone Number: {person.phone}</p>
+            <p>Age: {person.dob.age}</p>
+            <p>Location: {person.location.city}, {person.location.country}</p>
+            <img src={person.picture.medium} alt={`Profile of ${person.name.first} ${person.name.last}`}/>
+            <div>
+                <button onClick={() => history.push(`/${previous}`)}>Previous</button>
+                <button onClick={() => history.push('/')}>Full List</button>
+                <button onClick={() => history.push(`/${next}`)}>Next</button>
+            </div>
+
+        </div>
+    )
+}
+
+export default PersonDetail;

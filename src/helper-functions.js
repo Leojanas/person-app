@@ -15,5 +15,6 @@ const helpers = {
 
     },
 }
+helpers.getPerson()
 
 export default helpers;
