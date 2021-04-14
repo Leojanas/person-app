@@ -26,9 +26,9 @@ const PersonDetail = (props) => {
             <p className='center'>Location: {person.location.city}, {person.location.country}</p>
             
             <div className='buttons'>
-                <button onClick={() => history.push(`/user/${previous}`)}>Previous</button>
-                <button onClick={() => history.push('/page/1')}>Back to List</button>
-                <button onClick={() => history.push(`/user/${next}`)}>Next</button>
+                <button onClick={() => history.push(`/person-app/user/${previous}`)}>Previous</button>
+                <button onClick={() => history.push('/person-app/page/1')}>Back to List</button>
+                <button onClick={() => history.push(`/person-app/user/${next}`)}>Next</button>
             </div>
 
         </div>
