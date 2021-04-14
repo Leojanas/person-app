@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/person-app/static/css/main.38ddb799.chunk.css",
-    "main.js": "/person-app/static/js/main.b36a73d0.chunk.js",
-    "main.js.map": "/person-app/static/js/main.b36a73d0.chunk.js.map",
+    "main.js": "/person-app/static/js/main.5d1aee92.chunk.js",
+    "main.js.map": "/person-app/static/js/main.5d1aee92.chunk.js.map",
     "runtime-main.js": "/person-app/static/js/runtime-main.6f4d0f45.js",
     "runtime-main.js.map": "/person-app/static/js/runtime-main.6f4d0f45.js.map",
     "static/js/2.70a194c9.chunk.js": "/person-app/static/js/2.70a194c9.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.6f4d0f45.js",
     "static/js/2.70a194c9.chunk.js",
     "static/css/main.38ddb799.chunk.css",
-    "static/js/main.b36a73d0.chunk.js"
+    "static/js/main.5d1aee92.chunk.js"
   ]
 }
