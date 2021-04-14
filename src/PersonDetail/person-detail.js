@@ -6,15 +6,13 @@ const PersonDetail = (props) => {
     let match = useRouteMatch();
     let previous = parseInt(match.params.id) - 1;
     let next = parseInt(match.params.id) + 1;
-    console.log(props.peopleArray);
-    if(match.params.id == 0){
+    if(parseInt(match.params.id) === 0){
         previous = parseInt(props.peopleArray.length) - 1;
     }
-    if(match.params.id == (props.peopleArray.length -1)){
+    if(parseInt(match.params.id) === (props.peopleArray.length -1)){
         next = 0;
     }
     let person = props.peopleArray[match.params.id].props.person;
-    console.log(person)
     return (
         <div className='person-detail'>
             <h2>{person.name.title} {person.name.first} {person.name.last}</h2>

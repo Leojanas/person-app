@@ -5,31 +5,30 @@ import {useRouteMatch, useHistory} from 'react-router-dom';
 function PersonList(props) {
     let history = useHistory();
     let match = useRouteMatch();
+    if(!match.params.page){
+        history.push('/page/1')
+    }
     let [page, setPage] = React.useState(1)
     function prevPage(){
-        if(page !== 1){
+        if(parseInt(page) !== 1){
+            history.push(`/page/${page - 1}`)
             setPage(page -1);
-            history.push(`/page/${page}`)
-            
+
         }
     }
     function nextPage(){
         if((props.peopleArray.length /10) > page){
+            history.push(`/page/${page + 1}`)
             setPage(page + 1);
-            history.push(`/page/${page}`)
+            
         }
     }
     let start = (page*10) - 10;
     let fullResults = props.peopleArray;
     let results =
         fullResults
-        .filter((person, index) => {
-            console.log(index)
-            return index >= start })
-        .filter((person,index) => index < 10);
-
-    console.log(fullResults);
-    console.log(results);
+        .filter((person, index) => index >= start )
+        .filter((person, index) => index < 10);
     return (
         <div>
             <h2>People</h2>

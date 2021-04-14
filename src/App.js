@@ -18,15 +18,13 @@ function App() {
   async function handleGetResults() {
       let person = await helpers.getPerson();
       let newArray = peopleArray.map(obj => ({...obj}));
-      console.log(newArray)
       newArray.push(<Person key={peopleArray.length} id={peopleArray.length} person={person} />);
       setPeopleArray(newArray);
   }
   return (
     <main className='App'>
-
       <Route
-        path={'/page/:page'}
+        exact path={['/page/:page', '/']}
         render={() => <PersonList peopleArray={peopleArray} handleGetResults={handleGetResults}/>} 
       />
       <Route 
