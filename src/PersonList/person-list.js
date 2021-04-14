@@ -1,5 +1,6 @@
 import React from 'react';
 import {useRouteMatch, useHistory} from 'react-router-dom';
+import './person-list.css';
 
 
 function PersonList(props) {
@@ -31,12 +32,15 @@ function PersonList(props) {
         .filter((person, index) => index < 10);
     return (
         <div>
-            <h2>People</h2>
+            <h2 className='center'>Users</h2>
             {results}
-            <p>Page {page}</p>
-            <button onClick={prevPage}>Previous Page</button>
-            <button type='button' onClick={props.handleGetResults}>Get More Results</button>
-            <button onClick={nextPage}>Next Page</button>
+            <p className='center'>Page {page}</p>
+            <div className='buttons'>
+                <button onClick={prevPage}>Previous Page</button>
+                <button type='button' onClick={props.handleGetResults}>Get More Results</button>
+                <button onClick={nextPage}>Next Page</button>
+            </div>
+
             
         </div>
     )
