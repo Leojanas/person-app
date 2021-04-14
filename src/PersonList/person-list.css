@@ -22,6 +22,7 @@ button{
 @media screen and (min-width: 1000px){
     .list{
         width: 900px;
+        margin: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
