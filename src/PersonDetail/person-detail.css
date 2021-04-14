@@ -1,5 +1,5 @@
 .person-detail{
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     background-color: lightgrey;
     border-radius: 20px;
@@ -9,4 +9,10 @@
     text-align: center;
     padding-top: 10px;
     padding-bottom: 0px;
+}
+
+@media screen and (min-width: 500px){
+    .person-detail{
+        width: 400px;
+    }
 }

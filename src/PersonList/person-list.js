@@ -32,8 +32,12 @@ function PersonList(props) {
         .filter((person, index) => index < 10);
     return (
         <div>
-            <h2 className='center'>Users</h2>
-            {results}
+            <div className='title'>
+                <h2 className='center'>Users List</h2>
+            </div>
+            <div className='list'>
+                {results}
+            </div>
             <p className='center'>Page {page}</p>
             <div className='buttons'>
                 <button onClick={prevPage}>Previous Page</button>

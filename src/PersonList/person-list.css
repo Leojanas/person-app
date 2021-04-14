@@ -9,3 +9,23 @@
 button{
     margin: 10px;
 }
+.title{
+    background-color: lightgrey;
+    width: 80%;
+    margin: auto;
+}
+@media screen and (min-width: 500px){
+    .title{
+        width: 400px;
+    }
+}
+@media screen and (min-width: 1000px){
+    .list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .title{
+        width: 90%
+    }
+}

@@ -20,17 +20,15 @@ const PersonDetail = (props) => {
                 <img src={person.picture.large} alt={`Profile of ${person.name.first} ${person.name.last}`}/>
             </div>
             <h2 className='center'>{person.name.title} {person.name.first} {person.name.last}</h2>
-            <p className='center'>Phone Number: {person.phone}</p>
-            <p className='center'>Email Address: {person.email}</p>
             <p className='center'>Age: {person.dob.age}</p>
             <p className='center'>Location: {person.location.city}, {person.location.country}</p>
-            
+            <p className='center'>Phone Number: {person.phone}</p>
+            <p className='center'>Email Address: {person.email}</p>
             <div className='buttons'>
                 <button onClick={() => history.push(`/user/${previous}`)}>Previous</button>
                 <button onClick={() => history.push('/page/1')}>Back to List</button>
                 <button onClick={() => history.push(`/user/${next}`)}>Next</button>
             </div>
-
         </div>
     )
 }
