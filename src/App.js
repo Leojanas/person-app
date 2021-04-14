@@ -22,11 +22,11 @@ function App() {
   return (
     <main className='App'>
       <Route
-        exact path={['/page/:page', '/']}
+        exact path={['/person-app/page/:page', '/']}
         render={() => <PersonList peopleArray={peopleArray} handleGetResults={handleGetResults}/>} 
       />
       <Route 
-        path={'/user/:id'}
+        path={'/person-app/user/:id'}
         render={() => <PersonDetail peopleArray={peopleArray}/>}
       />
         
