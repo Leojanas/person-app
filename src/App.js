@@ -22,7 +22,7 @@ function App() {
   return (
     <main className='App'>
       <Route
-        exact path={['/person-app/page/:page', '/']}
+        exact path={['/person-app/page/:page', '/person-app']}
         render={() => <PersonList peopleArray={peopleArray} handleGetResults={handleGetResults}/>} 
       />
       <Route 
