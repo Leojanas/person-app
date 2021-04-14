@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, useRouteMatch, useHistory} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import PersonList from './PersonList/person-list';
 import PersonDetail from './PersonDetail/person-detail';
 import Person from './Person/person';
@@ -7,8 +7,6 @@ import people from './people';
 import helpers from './helper-functions';
 
 function App() {
-  let match = useRouteMatch();
-  let history = useHistory();
   let initialArray = [];
   for(let i=0; i<people.length; i++){
       initialArray.push(<Person key={i} id={i} person={people[i]}/>)
