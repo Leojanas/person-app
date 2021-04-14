@@ -23,9 +23,9 @@ const PersonDetail = (props) => {
             <p>Location: {person.location.city}, {person.location.country}</p>
             <img src={person.picture.medium} alt={`Profile of ${person.name.first} ${person.name.last}`}/>
             <div>
-                <button onClick={() => history.push(`/${previous}`)}>Previous</button>
-                <button onClick={() => history.push('/')}>Full List</button>
-                <button onClick={() => history.push(`/${next}`)}>Next</button>
+                <button onClick={() => history.push(`/user/${previous}`)}>Previous</button>
+                <button onClick={() => history.push('/page/1')}>Back to List</button>
+                <button onClick={() => history.push(`/user/${next}`)}>Next</button>
             </div>
 
         </div>
