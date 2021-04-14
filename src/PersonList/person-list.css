@@ -21,11 +21,12 @@ button{
 }
 @media screen and (min-width: 1000px){
     .list{
+        width: 900px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
     .title{
-        width: 90%
+        width: 900px;
     }
 }
