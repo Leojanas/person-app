@@ -7,19 +7,19 @@ function PersonList(props) {
     let history = useHistory();
     let match = useRouteMatch();
     if(!match.params.page){
-        history.push('person-app/page/1')
+        history.push('/page/1')
     }
     let [page, setPage] = React.useState(1)
     function prevPage(){
         if(parseInt(page) !== 1){
-            history.push(`/person-app/page/${page - 1}`)
+            history.push(`/page/${page - 1}`)
             setPage(page -1);
 
         }
     }
     function nextPage(){
         if((props.peopleArray.length /10) > page){
-            history.push(`/person-app/page/${page + 1}`)
+            history.push(`/page/${page + 1}`)
             setPage(page + 1);
             
         }
