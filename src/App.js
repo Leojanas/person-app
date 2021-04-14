@@ -5,6 +5,7 @@ import PersonDetail from './PersonDetail/person-detail';
 import Person from './Person/person';
 import people from './people';
 import helpers from './helper-functions';
+import Home from './Home/home';
 
 function App() {
   let initialArray = [];
@@ -21,8 +22,12 @@ function App() {
   }
   return (
     <main className='App'>
+      <Route 
+        path={'/'}
+        component={Home}
+      />
       <Route
-        exact path={['/page/:page', '/']}
+        exact path={'/page/:page'}
         render={() => <PersonList peopleArray={peopleArray} handleGetResults={handleGetResults}/>} 
       />
       <Route 
