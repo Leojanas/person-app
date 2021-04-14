@@ -23,7 +23,7 @@ function App() {
   return (
     <main className='App'>
       <Route 
-        path={'/'}
+        exact path={'/'}
         component={Home}
       />
       <Route

@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 
 const Home = () => {
+    let history = useHistory();
+    history.push('/page/1')
     return (
         <div>
-            <Link to={'/page/1'}><p>List</p></Link>
+            <Link to={'/page/1'}><p>View User List</p></Link>
         </div>
     )
 }
